@@ -14,7 +14,7 @@ public class RemainingAverageRedPacketFactoryTest {
     @Test
     void take() {
         RemainingAverageRedPacketFactory factory = new RemainingAverageRedPacketFactory();
-        RedPacket packet = RedPacket.create(1, 10000, 1880);
+        RedPacket packet = RedPacket.create(1, 100, 10);
         double sum = 0;
         while (packet.getRemainSize() != 0) {
             double value = factory.take(packet);
